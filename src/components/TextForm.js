@@ -13,6 +13,9 @@ export default function TextForm(props) {
     const handleChange = (event) => {
         setText(event.target.value);
     }
+    const handleClearClick = (event) => {
+        setText("");
+    }
     return (
         <>
             <div className='container'>
@@ -23,6 +26,7 @@ export default function TextForm(props) {
                 </div>
                 <button className='btn btn-primary mx-2' onClick={handleUpClick}>Convert to Uppercase</button>
                 <button className='btn btn-primary mx-2' onClick={handleLowClick}>Convert to Lowercase</button>
+                <button className='btn btn-primary mx-2' onClick={handleClearClick}>Clear text</button>
 
             </div>
             <div className="containter my-5">
